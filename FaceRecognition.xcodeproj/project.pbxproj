@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30107AD92443959700028602 /* CropFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30107AD82443959700028602 /* CropFaceViewController.swift */; };
+		30107ADB2443977900028602 /* CropFaceCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30107ADA2443977900028602 /* CropFaceCustomCell.swift */; };
+		30107ADD2443990000028602 /* FaceCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30107ADC2443990000028602 /* FaceCropper.swift */; };
 		304D279A24423B9B0058A19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D279924423B9B0058A19D /* AppDelegate.swift */; };
 		304D279C24423B9B0058A19D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D279B24423B9B0058A19D /* SceneDelegate.swift */; };
 		304D279E24423B9B0058A19D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D279D24423B9B0058A19D /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30107AD82443959700028602 /* CropFaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropFaceViewController.swift; sourceTree = "<group>"; };
+		30107ADA2443977900028602 /* CropFaceCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropFaceCustomCell.swift; sourceTree = "<group>"; };
+		30107ADC2443990000028602 /* FaceCropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCropper.swift; sourceTree = "<group>"; };
 		304D279624423B9B0058A19D /* FaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D279924423B9B0058A19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D279B24423B9B0058A19D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,9 @@
 				304D279D24423B9B0058A19D /* ViewController.swift */,
 				304D27AF244383BB0058A19D /* CustomCell+Vision.swift */,
 				304D279F24423B9B0058A19D /* Main.storyboard */,
+				30107ADA2443977900028602 /* CropFaceCustomCell.swift */,
+				30107AD82443959700028602 /* CropFaceViewController.swift */,
+				30107ADC2443990000028602 /* FaceCropper.swift */,
 				304D27A224423B9F0058A19D /* Assets.xcassets */,
 				304D27AD24432CAC0058A19D /* CustomCell.swift */,
 				304D27A424423B9F0058A19D /* LaunchScreen.storyboard */,
@@ -145,9 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				304D279E24423B9B0058A19D /* ViewController.swift in Sources */,
+				30107AD92443959700028602 /* CropFaceViewController.swift in Sources */,
 				304D279A24423B9B0058A19D /* AppDelegate.swift in Sources */,
 				304D27B0244383BB0058A19D /* CustomCell+Vision.swift in Sources */,
 				304D27AE24432CAC0058A19D /* CustomCell.swift in Sources */,
+				30107ADB2443977900028602 /* CropFaceCustomCell.swift in Sources */,
+				30107ADD2443990000028602 /* FaceCropper.swift in Sources */,
 				304D279C24423B9B0058A19D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
