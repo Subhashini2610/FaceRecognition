@@ -16,15 +16,11 @@ class CustomCell: UICollectionViewCell {
                 return
             }
             cleanOldFacesDetected()
+            photoImageView.contentMode = .scaleAspectFill
             photoImageView.image = image
         }
     }
-    let photoImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        return iv
-    }()
+    @IBOutlet weak var photoImageView: UIImageView!
     
     func cleanOldFacesDetected () {
         detectedFaces?.forEach({
@@ -34,14 +30,9 @@ class CustomCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        self.addSubview(photoImageView)
-        NSLayoutConstraint.activate([
-            photoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            photoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            photoImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            photoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+//        self.addSubview(photoImageView)
+        
+//        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
     @objc func handleTap() {
