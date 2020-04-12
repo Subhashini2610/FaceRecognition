@@ -45,7 +45,7 @@ class CustomCell: UICollectionViewCell {
     
     @objc func handleTap() {
         cleanupOldFaceDetected()
-//        self.detectFaces()
+        self.detectFaces()
     }
     
     override init(frame: CGRect) {

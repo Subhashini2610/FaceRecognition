@@ -14,6 +14,7 @@
 		304D27A324423B9F0058A19D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 304D27A224423B9F0058A19D /* Assets.xcassets */; };
 		304D27A624423B9F0058A19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304D27A424423B9F0058A19D /* LaunchScreen.storyboard */; };
 		304D27AE24432CAC0058A19D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D27AD24432CAC0058A19D /* CustomCell.swift */; };
+		304D27B0244383BB0058A19D /* CustomCell+Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D27AF244383BB0058A19D /* CustomCell+Vision.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		304D27A524423B9F0058A19D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		304D27A724423B9F0058A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		304D27AD24432CAC0058A19D /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		304D27AF244383BB0058A19D /* CustomCell+Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomCell+Vision.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				304D279924423B9B0058A19D /* AppDelegate.swift */,
 				304D279B24423B9B0058A19D /* SceneDelegate.swift */,
 				304D279D24423B9B0058A19D /* ViewController.swift */,
+				304D27AF244383BB0058A19D /* CustomCell+Vision.swift */,
 				304D279F24423B9B0058A19D /* Main.storyboard */,
 				304D27A224423B9F0058A19D /* Assets.xcassets */,
 				304D27AD24432CAC0058A19D /* CustomCell.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				304D279E24423B9B0058A19D /* ViewController.swift in Sources */,
 				304D279A24423B9B0058A19D /* AppDelegate.swift in Sources */,
+				304D27B0244383BB0058A19D /* CustomCell+Vision.swift in Sources */,
 				304D27AE24432CAC0058A19D /* CustomCell.swift in Sources */,
 				304D279C24423B9B0058A19D /* SceneDelegate.swift in Sources */,
 			);
