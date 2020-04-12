@@ -19,8 +19,8 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e9M-aB-xOm">
                                 <rect key="frame" x="0.0" y="44" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Edc-hv-W7x">
-                                    <size key="itemSize" width="376" height="378"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vr5-6E-Msb">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -32,29 +32,15 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pqw-Si-1e0">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="378"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-N4-zMl">
-                                                    <rect key="frame" x="8" y="8" width="360" height="362"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="bzg-N4-zMl" secondAttribute="bottom" constant="8" id="2my-ll-Hb4"/>
-                                                <constraint firstItem="bzg-N4-zMl" firstAttribute="top" secondItem="Pqw-Si-1e0" secondAttribute="top" constant="8" id="JQY-ad-Kzu"/>
-                                                <constraint firstAttribute="trailing" secondItem="bzg-N4-zMl" secondAttribute="trailing" constant="8" id="Js7-qE-4YK"/>
-                                                <constraint firstItem="bzg-N4-zMl" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" constant="8" id="z4E-fd-Zb1"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="376" height="378"/>
-                                        <connections>
-                                            <outlet property="photoImageView" destination="bzg-N4-zMl" id="hja-Sb-7tb"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="e9M-aB-xOm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ETJ-Dd-99S"/>
+                            <constraint firstItem="e9M-aB-xOm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ETJ-Dd-99S"/>
                             <constraint firstItem="e9M-aB-xOm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J9z-nI-VZk"/>
                             <constraint firstItem="e9M-aB-xOm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KxY-y6-Kk0"/>
                             <constraint firstItem="e9M-aB-xOm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lss-BE-oCj"/>
@@ -67,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+            <point key="canvasLocation" x="-1" y="-17"/>
         </scene>
     </scenes>
 </document>

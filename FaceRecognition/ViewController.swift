@@ -9,39 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var data: [UIImage?] = [UIImage(named: "faces"), UIImage(named: "giants"), UIImage(named: "starWars"), UIImage(named: "xMen")]
+    var data: [UIImage] = [#imageLiteral(resourceName: "xMen"), #imageLiteral(resourceName: "giants"), #imageLiteral(resourceName: "starWars"), #imageLiteral(resourceName: "faces")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
         cell.image = data[indexPath.item]
         return cell
     }
-       
-}
-
-extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height)
+        return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
     }
 }
+

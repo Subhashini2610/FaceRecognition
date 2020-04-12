@@ -12,17 +12,20 @@ class CustomCell: UICollectionViewCell {
     var detectedFaces: [UIView]?
     var image: UIImage? {
         didSet {
-            guard let image = image else {
-                return
-            }
-            cleanOldFacesDetected()
-            photoImageView.contentMode = .scaleAspectFill
+            guard let image = image else {return}
+            cleanupOldFaceDetected()
             photoImageView.image = image
         }
     }
-    @IBOutlet weak var photoImageView: UIImageView!
     
-    func cleanOldFacesDetected () {
+    let photoImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        return iv
+    }()
+    
+    func cleanupOldFaceDetected() {
         detectedFaces?.forEach({
             $0.removeFromSuperview()
         })
@@ -30,14 +33,19 @@ class CustomCell: UICollectionViewCell {
     }
     
     func setupViews() {
-//        self.addSubview(photoImageView)
-        
-//        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        self.addSubview(photoImageView)
+        NSLayoutConstraint.activate([
+            photoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            photoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            photoImageView.topAnchor.constraint(equalTo: self.topAnchor),
+            photoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
     @objc func handleTap() {
-        cleanOldFacesDetected()
-        //call face detection here
+        cleanupOldFaceDetected()
+//        self.detectFaces()
     }
     
     override init(frame: CGRect) {
@@ -45,8 +53,8 @@ class CustomCell: UICollectionViewCell {
         setupViews()
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         setupViews()
     }
 }
