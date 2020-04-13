@@ -94,7 +94,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NgF-pw-yVU">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fba-xF-mns">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fba-xF-mns">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -109,12 +109,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vyH-A3-aZv">
-                                                    <rect key="frame" x="0.0" y="4.5" width="127" height="122"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="131"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="vyH-A3-aZv" firstAttribute="centerX" secondItem="4VY-bb-thQ" secondAttribute="centerX" id="aWy-rr-KzB"/>
-                                                <constraint firstItem="vyH-A3-aZv" firstAttribute="height" secondItem="4VY-bb-thQ" secondAttribute="height" multiplier="0.931298" id="dQi-gd-yy7"/>
+                                                <constraint firstItem="vyH-A3-aZv" firstAttribute="height" secondItem="4VY-bb-thQ" secondAttribute="height" id="dQi-gd-yy7"/>
                                                 <constraint firstItem="vyH-A3-aZv" firstAttribute="centerY" secondItem="4VY-bb-thQ" secondAttribute="centerY" id="sdy-jE-OMs"/>
                                                 <constraint firstItem="vyH-A3-aZv" firstAttribute="width" secondItem="4VY-bb-thQ" secondAttribute="width" id="szm-yC-Eyh"/>
                                             </constraints>

@@ -32,23 +32,33 @@ extension CustomCell {
     }
     
     func createAnimatedFaceBox(image: UIImage, rect: CGRect) -> UIView {
-        let imageScaledHeight = self.getScaledHeight(image: image)
-        let transformFlip = CGAffineTransform.init(scaleX: 1, y: -1).translatedBy(x: 0, y: -imageScaledHeight - self.frame.height / 2 + imageScaledHeight / 2)
-        let transformScale = CGAffineTransform.identity.scaledBy(x: self.frame.width, y: imageScaledHeight)
-        let convertedRect = rect.applying(transformScale).applying(transformFlip)
         
-        let faceBox = UIView()
-        faceBox.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        faceBox.layer.borderWidth = 2
-        faceBox.layer.cornerRadius = 8
-        faceBox.frame = convertedRect
-        faceBox.backgroundColor = UIColor(white: 1.0, alpha: 0.3)
-        faceBox.layer.transform = CATransform3DMakeScale(0, 0, 0)
+        guard let baseVC = delegate as? ViewController else {
+            return UIView()
+        }
+        if let navBarHeight = baseVC.navigationController?.navigationBar.frame.size.height {
+
+            let imageScaledHeight = self.getScaledHeight(image: image)
+            let transformFlip = CGAffineTransform.init(scaleX: 1, y: -1).translatedBy(x: 0, y: -imageScaledHeight - self.frame.height / 2 + imageScaledHeight / 2 + navBarHeight/2)
+            let transformScale = CGAffineTransform.identity.scaledBy(x: self.frame.width, y: imageScaledHeight)
+            let convertedRect = rect.applying(transformScale).applying(transformFlip)
+            
+            let faceBox = UIView()
+            faceBox.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            faceBox.layer.borderWidth = 2
+            faceBox.layer.cornerRadius = 8
+            faceBox.frame = convertedRect
+            faceBox.backgroundColor = UIColor(white: 1.0, alpha: 0.3)
+            faceBox.layer.transform = CATransform3DMakeScale(0, 0, 0)
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+                faceBox.layer.transform = CATransform3DMakeScale(1, 1, 1)
+            }, completion: nil)
+            return faceBox
+        }
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
-            faceBox.layer.transform = CATransform3DMakeScale(1, 1, 1)
-        }, completion: nil)
-        return faceBox
+        return UIView()
+        
     }
     
     func getScaledHeight(image: UIImage) -> CGFloat {
