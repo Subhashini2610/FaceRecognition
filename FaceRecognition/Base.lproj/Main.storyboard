@@ -34,12 +34,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-td-hiA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="348"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="280"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48h-be-K6w">
+                                                    <rect key="frame" x="0.0" y="280" width="376" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="View Contour Lines"/>
+                                                    <connections>
+                                                        <action selector="didTapViewContourLines:" destination="pOO-0P-3fF" eventType="touchUpInside" id="4hx-dn-yvg"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJU-bv-g70">
-                                                    <rect key="frame" x="0.0" y="348" width="376" height="30"/>
+                                                    <rect key="frame" x="0.0" y="320" width="376" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="PmR-EC-1n8"/>
+                                                        <constraint firstAttribute="height" constant="40" id="PmR-EC-1n8"/>
                                                     </constraints>
                                                     <state key="normal" title="View Cropped Faces"/>
                                                     <connections>
@@ -49,11 +58,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="zJU-bv-g70" secondAttribute="trailing" id="3Hm-wE-F4W"/>
-                                                <constraint firstItem="zJU-bv-g70" firstAttribute="top" secondItem="nvI-td-hiA" secondAttribute="bottom" id="49K-4a-Wgt"/>
                                                 <constraint firstItem="zJU-bv-g70" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" id="6hQ-Bi-1mO"/>
+                                                <constraint firstItem="48h-be-K6w" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" id="8d1-jH-DSB"/>
+                                                <constraint firstItem="48h-be-K6w" firstAttribute="height" secondItem="zJU-bv-g70" secondAttribute="height" id="CNZ-hq-2QL"/>
                                                 <constraint firstItem="nvI-td-hiA" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" id="NCY-Cr-OJB"/>
                                                 <constraint firstAttribute="trailing" secondItem="nvI-td-hiA" secondAttribute="trailing" id="W98-6m-TWg"/>
-                                                <constraint firstAttribute="bottom" secondItem="zJU-bv-g70" secondAttribute="bottom" id="gVs-F1-keH"/>
+                                                <constraint firstItem="zJU-bv-g70" firstAttribute="top" secondItem="48h-be-K6w" secondAttribute="bottom" id="aNX-z8-vab"/>
+                                                <constraint firstAttribute="trailing" secondItem="48h-be-K6w" secondAttribute="trailing" id="e8K-Vh-0ag"/>
+                                                <constraint firstAttribute="bottom" secondItem="zJU-bv-g70" secondAttribute="bottom" multiplier="1.05" id="gVs-F1-keH"/>
+                                                <constraint firstItem="48h-be-K6w" firstAttribute="top" secondItem="nvI-td-hiA" secondAttribute="bottom" id="hTD-Jv-YMa"/>
                                                 <constraint firstItem="nvI-td-hiA" firstAttribute="top" secondItem="Pqw-Si-1e0" secondAttribute="top" id="kSF-8L-5pa"/>
                                             </constraints>
                                         </collectionViewCellContentView>

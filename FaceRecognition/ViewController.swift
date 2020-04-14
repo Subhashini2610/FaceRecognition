@@ -40,6 +40,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
 
 extension ViewController: FaceInformation {
+    
     func viewCroppedFaces(image: UIImage) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CropFaceViewController") as! CropFaceViewController

@@ -34,13 +34,6 @@ class CustomCell: UICollectionViewCell {
     }
     
     func setupViews() {
-//        self.addSubview(photoImageView)
-//        NSLayoutConstraint.activate([
-//            photoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-//            photoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-//            photoImageView.topAnchor.constraint(equalTo: self.topAnchor),
-//            photoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-//        ])
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
@@ -60,5 +53,13 @@ class CustomCell: UICollectionViewCell {
     }
     @IBAction func didTapToViewCroppedFaces(_ sender: Any) {
         self.delegate?.viewCroppedFaces(image: self.image!)
+    }
+    @IBAction func didTapViewContourLines(_ sender: Any) {
+        DispatchQueue.global().async{
+            FaceDetector().findLandmarks(for: self.image!) { (image) in
+                DispatchQueue.main.async {                                    self.photoImageView.image = image
+                }
+            }
+        }
     }
 }
