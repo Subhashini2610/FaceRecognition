@@ -88,7 +88,7 @@ class FaceDetector {
         context.drawPath(using: CGPathDrawingMode.stroke)
         
         //draw features
-        var fillColor = UIColor.blue
+        let fillColor = UIColor.blue
         fillColor.setStroke()
         
         context.setLineWidth(2.0)

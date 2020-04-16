@@ -136,6 +136,9 @@
                         <viewLayoutGuide key="safeArea" id="oja-i4-q5b"/>
                     </view>
                     <navigationItem key="navigationItem" id="b1w-tB-rff"/>
+                    <connections>
+                        <outlet property="previewView" destination="OsM-wf-idh" id="kk1-fA-Nc0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gy6-f6-Stw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

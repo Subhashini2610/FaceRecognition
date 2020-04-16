@@ -33,10 +33,6 @@ extension CustomCell {
     
     func createAnimatedFaceBox(image: UIImage, rect: CGRect) -> UIView {
         
-        guard let baseVC = delegate as? ViewController else {
-            return UIView()
-        }
-        
         let imageScaledHeight = self.getScaledHeight(image: image)
         let yTransform = -imageScaledHeight - self.photoImageView.frame.height / 2 + imageScaledHeight / 2
         let transformFlip = CGAffineTransform.init(scaleX: 1, y: -1).translatedBy(x: 0, y: yTransform)
