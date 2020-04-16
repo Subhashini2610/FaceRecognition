@@ -39,7 +39,8 @@ extension CustomCell {
         if let navBarHeight = baseVC.navigationController?.navigationBar.frame.size.height {
 
             let imageScaledHeight = self.getScaledHeight(image: image)
-            let transformFlip = CGAffineTransform.init(scaleX: 1, y: -1).translatedBy(x: 0, y: -imageScaledHeight - self.frame.height / 2 + imageScaledHeight / 2 + navBarHeight/2)
+            let yTransform = -imageScaledHeight - self.photoImageView.frame.height / 2 + imageScaledHeight / 2
+            let transformFlip = CGAffineTransform.init(scaleX: 1, y: -1).translatedBy(x: 0, y: yTransform)
             let transformScale = CGAffineTransform.identity.scaledBy(x: self.frame.width, y: imageScaledHeight)
             let convertedRect = rect.applying(transformScale).applying(transformFlip)
             
