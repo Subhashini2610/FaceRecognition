@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vff-T9-lCP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qTi-Ei-n9a">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -94,7 +94,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="-17.410714285714285"/>
+            <point key="canvasLocation" x="1818.840579710145" y="-17.410714285714285"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="DI5-ck-qjE">
+            <objects>
+                <navigationController id="OIy-IW-GeR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Videos" image="video.fill" catalog="system" id="JBc-mi-4Fr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hD3-wN-EMm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mB2-IX-23W" kind="relationship" relationship="rootViewController" id="ECl-09-udh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwY-Dh-dy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="715"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="n3w-U3-U0T">
+            <objects>
+                <viewController id="mB2-IX-23W" customClass="VideoViewController" customModule="FaceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MDs-if-phI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oja-i4-q5b"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b1w-tB-rff"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gy6-f6-Stw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="714"/>
         </scene>
         <!--Crop Face View Controller-->
         <scene sceneID="kmD-cD-RaU">
@@ -155,12 +188,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ue0-FJ-CKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.8115942028987" y="-62.276785714285708"/>
+            <point key="canvasLocation" x="2786.9565217391305" y="-62.276785714285708"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Images-->
         <scene sceneID="kmz-P5-M6C">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vff-T9-lCP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Images" image="photo" catalog="system" id="wcL-RP-3RA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ghq-Bt-gI7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -173,7 +207,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVU-40-Bm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="-17.410714285714285"/>
+        </scene>
+        <!--Images-->
+        <scene sceneID="Y4G-4d-9Xf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qTi-Ei-n9a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Images" id="gko-Yt-cti" userLabel="Item"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aJL-74-RyZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Vff-T9-lCP" kind="relationship" relationship="viewControllers" id="6YR-Pu-YVx"/>
+                        <segue destination="OIy-IW-GeR" kind="relationship" relationship="viewControllers" id="9bw-cz-7DP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jqm-al-Nzk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-1.4492753623188408" y="-17.410714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="64" height="46"/>
+        <image name="video.fill" catalog="system" width="64" height="40"/>
+    </resources>
 </document>

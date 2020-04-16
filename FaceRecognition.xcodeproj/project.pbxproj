@@ -10,6 +10,7 @@
 		30107AD92443959700028602 /* CropFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30107AD82443959700028602 /* CropFaceViewController.swift */; };
 		30107ADB2443977900028602 /* CropFaceCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30107ADA2443977900028602 /* CropFaceCustomCell.swift */; };
 		30107ADD2443990000028602 /* FaceCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30107ADC2443990000028602 /* FaceCropper.swift */; };
+		303BBFA62448B828002EA41D /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303BBFA52448B828002EA41D /* VideoViewController.swift */; };
 		304D279A24423B9B0058A19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D279924423B9B0058A19D /* AppDelegate.swift */; };
 		304D279C24423B9B0058A19D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D279B24423B9B0058A19D /* SceneDelegate.swift */; };
 		304D279E24423B9B0058A19D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D279D24423B9B0058A19D /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		30107AD82443959700028602 /* CropFaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropFaceViewController.swift; sourceTree = "<group>"; };
 		30107ADA2443977900028602 /* CropFaceCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropFaceCustomCell.swift; sourceTree = "<group>"; };
 		30107ADC2443990000028602 /* FaceCropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCropper.swift; sourceTree = "<group>"; };
+		303BBFA52448B828002EA41D /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		304D279624423B9B0058A19D /* FaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D279924423B9B0058A19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D279B24423B9B0058A19D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				304D279D24423B9B0058A19D /* ViewController.swift */,
 				304D27AF244383BB0058A19D /* CustomCell+Vision.swift */,
 				304D279F24423B9B0058A19D /* Main.storyboard */,
+				303BBFA52448B828002EA41D /* VideoViewController.swift */,
 				30107ADA2443977900028602 /* CropFaceCustomCell.swift */,
 				30107AD82443959700028602 /* CropFaceViewController.swift */,
 				30EA1BAE2446099E00CF8CD8 /* FaceDetector.swift */,
@@ -164,6 +167,7 @@
 				30107ADB2443977900028602 /* CropFaceCustomCell.swift in Sources */,
 				30107ADD2443990000028602 /* FaceCropper.swift in Sources */,
 				30EA1BAF2446099E00CF8CD8 /* FaceDetector.swift in Sources */,
+				303BBFA62448B828002EA41D /* VideoViewController.swift in Sources */,
 				304D279C24423B9B0058A19D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
