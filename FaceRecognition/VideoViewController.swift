@@ -13,8 +13,12 @@ import AVFoundation
 class VideoViewController: UIViewController {
     
     @IBOutlet weak var previewView: PreviewView!
- 
+    
+    @IBOutlet weak var btnSwitchCamera: UIButton!
+    
     var devicePosition: AVCaptureDevice.Position = .back
+    
+    var cameraMode: CameraMode = .backCamera
     
     var session = AVCaptureSession()
     var isSessionRunning = false
@@ -206,6 +210,71 @@ class VideoViewController: UIViewController {
         
         return exifOrientation.rawValue
     }
+    
+    @IBAction func btnSwitchCameraPressed(_ sender: Any) {
+        
+        DispatchQueue.main.async {
+            switch self.cameraMode {
+            case .backCamera:
+                self.cameraMode = .frontCamera
+                self.btnSwitchCamera.titleLabel?.text = "Switch to back camera"
+            case .frontCamera:
+                self.cameraMode = .backCamera
+                self.btnSwitchCamera.titleLabel?.text = "Switch to front camera"
+                
+            }
+        }
+        
+        //Remove existing input
+        guard let currentCameraInput: AVCaptureInput = session.inputs.first else {
+            return
+        }
+        
+        //Indicate that some changes will be made to the session
+        session.beginConfiguration()
+        session.removeInput(currentCameraInput)
+        
+        //Get new input
+        var newCamera: AVCaptureDevice! = nil
+        if let input = currentCameraInput as? AVCaptureDeviceInput {
+            if (input.device.position == .back) {
+                newCamera = cameraWithPosition(position: .front)
+            } else {
+                newCamera = cameraWithPosition(position: .back)
+            }
+        }
+        
+        //Add input to session
+        var err: NSError?
+        var newVideoInput: AVCaptureDeviceInput!
+        do {
+            newVideoInput = try AVCaptureDeviceInput(device: newCamera)
+        } catch let err1 as NSError {
+            err = err1
+            newVideoInput = nil
+        }
+        
+        if newVideoInput == nil || err != nil {
+            print("Error creating capture device input: \(String(describing: err?.localizedDescription))")
+        } else {
+            session.addInput(newVideoInput)
+        }
+        
+        //Commit all the configuration changes at once
+        session.commitConfiguration()
+    }
+    
+}
+
+// Find a camera with the specified AVCaptureDevicePosition, returning nil if one is not found
+func cameraWithPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
+    let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .unspecified)
+    for device in discoverySession.devices {
+        if device.position == position {
+            return device
+        }
+    }
+    return nil
 }
 
 extension VideoViewController {
@@ -265,6 +334,11 @@ extension VideoViewController {
         case success
         case notAuthorised
         case configurationFailed
+    }
+    
+    enum CameraMode {
+        case backCamera
+        case frontCamera
     }
 }
 

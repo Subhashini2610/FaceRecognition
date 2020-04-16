@@ -123,7 +123,25 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsM-wf-idh" customClass="PreviewView" customModule="FaceRecognition" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zap-oD-6RE">
+                                        <rect key="frame" x="0.0" y="625" width="414" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="ZE9-xc-goL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Switch to front camera"/>
+                                        <connections>
+                                            <action selector="btnSwitchCameraPressed:" destination="mB2-IX-23W" eventType="touchUpInside" id="p9l-ex-TAO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Zap-oD-6RE" firstAttribute="leading" secondItem="OsM-wf-idh" secondAttribute="leading" id="TSc-fZ-9LQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zap-oD-6RE" secondAttribute="trailing" id="vRh-1C-D1C"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zap-oD-6RE" secondAttribute="bottom" constant="64" id="wFR-3j-nl5"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -137,6 +155,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="b1w-tB-rff"/>
                     <connections>
+                        <outlet property="btnSwitchCamera" destination="Zap-oD-6RE" id="kms-9j-fUC"/>
                         <outlet property="previewView" destination="OsM-wf-idh" id="kk1-fA-Nc0"/>
                     </connections>
                 </viewController>
@@ -231,6 +250,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Images" id="gko-Yt-cti" userLabel="Item"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aJL-74-RyZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
