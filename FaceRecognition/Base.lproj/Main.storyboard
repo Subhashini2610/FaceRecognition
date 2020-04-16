@@ -120,7 +120,19 @@
                     <view key="view" contentMode="scaleToFill" id="MDs-if-phI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsM-wf-idh" customClass="PreviewView" customModule="FaceRecognition" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OsM-wf-idh" firstAttribute="leading" secondItem="oja-i4-q5b" secondAttribute="leading" id="4YH-l4-zQc"/>
+                            <constraint firstItem="oja-i4-q5b" firstAttribute="trailing" secondItem="OsM-wf-idh" secondAttribute="trailing" id="O9b-KZ-pAL"/>
+                            <constraint firstItem="oja-i4-q5b" firstAttribute="bottom" secondItem="OsM-wf-idh" secondAttribute="bottom" id="nmO-0M-4c5"/>
+                            <constraint firstItem="OsM-wf-idh" firstAttribute="top" secondItem="oja-i4-q5b" secondAttribute="top" id="ujc-fb-uRw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oja-i4-q5b"/>
                     </view>
                     <navigationItem key="navigationItem" id="b1w-tB-rff"/>
