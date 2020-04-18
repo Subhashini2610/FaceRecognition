@@ -30,7 +30,7 @@
 		30107ADC2443990000028602 /* FaceCropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCropper.swift; sourceTree = "<group>"; };
 		303BBFA52448B828002EA41D /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		303BBFA72448B9ED002EA41D /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
-		304D279624423B9B0058A19D /* Face Recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Recognition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		304D279624423B9B0058A19D /* Face Detection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Detection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		304D279924423B9B0058A19D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		304D279B24423B9B0058A19D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		304D279D24423B9B0058A19D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		304D279724423B9B0058A19D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				304D279624423B9B0058A19D /* Face Recognition.app */,
+				304D279624423B9B0058A19D /* Face Detection.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 			);
 			name = FaceRecognition;
 			productName = FaceRecognition;
-			productReference = 304D279624423B9B0058A19D /* Face Recognition.app */;
+			productReference = 304D279624423B9B0058A19D /* Face Detection.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -330,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.FaceRecognition;
-				PRODUCT_NAME = "Face Recognition";
+				PRODUCT_NAME = "Face Detection";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,7 +351,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.company.FaceRecognition;
-				PRODUCT_NAME = "Face Recognition";
+				PRODUCT_NAME = "Face Detection";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -22,6 +22,7 @@ class CropFaceViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         getFacesFromPicture()
+        self.title = "Detected Faces"
     }
     
     override func viewWillAppear(_ animated: Bool) {

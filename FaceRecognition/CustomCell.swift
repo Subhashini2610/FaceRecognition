@@ -68,7 +68,7 @@ class CustomCell: UICollectionViewCell {
     }
     
     @IBAction func didTapToViewTexts(_ sender: Any) {
-        let inputImage = self.photoImageView.image
+        let inputImage = self.image
         DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
             TextDetector().detectText(on: inputImage!) { (resultImage) in
                 DispatchQueue.main.async {

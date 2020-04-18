@@ -57,7 +57,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="PmR-EC-1n8"/>
                                                     </constraints>
-                                                    <state key="normal" title="View Cropped Faces"/>
+                                                    <state key="normal" title="View Detected Faces"/>
                                                     <connections>
                                                         <action selector="didTapToViewCroppedFaces:" destination="pOO-0P-3fF" eventType="touchUpInside" id="B8C-Fw-BAh"/>
                                                     </connections>

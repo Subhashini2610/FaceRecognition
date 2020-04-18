@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.title = "Face and Text Detection"
     }
 }
 
