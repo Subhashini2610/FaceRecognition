@@ -40,7 +40,7 @@ class VideoViewController: UIViewController {
         faceDetectionRequest = VNDetectFaceLandmarksRequest(completionHandler: self.handleFaceLandmarks)
         setCameraAuth()
         setupVision()
-        
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
