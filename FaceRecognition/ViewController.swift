@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var data: [UIImage] = [#imageLiteral(resourceName: "xMen"), #imageLiteral(resourceName: "giants"), #imageLiteral(resourceName: "starWars"), #imageLiteral(resourceName: "faces"), #imageLiteral(resourceName: "TextDetection")]
+    var data: [UIImage] = [#imageLiteral(resourceName: "HarryPotter"), #imageLiteral(resourceName: "friends"), #imageLiteral(resourceName: "avengers"), #imageLiteral(resourceName: "office"), #imageLiteral(resourceName: "TextDetection")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
