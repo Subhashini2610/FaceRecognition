@@ -42,7 +42,7 @@ class CropFaceViewController: UIViewController {
                 print(failed)
             case .error(let error):
                 print(error)
-            
+                
             }
         }
     }

@@ -51,7 +51,7 @@ extension CustomCell {
             faceBox.layer.transform = CATransform3DMakeScale(1, 1, 1)
         }, completion: nil)
         return faceBox
-                
+        
     }
     
     func getScaledHeight(image: UIImage) -> CGFloat {
