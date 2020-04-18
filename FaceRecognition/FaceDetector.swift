@@ -11,13 +11,15 @@ import Vision
 
 class FaceDetector {
     
-    func findLandmarks(for image: UIImage, completion: @escaping((UIImage) -> Void)) {
+    func findLandmarks(for image: UIImage, completion: @escaping((UIImage?) -> Void)) {
         var resultImage = image
         let detectFaceRequest = VNDetectFaceLandmarksRequest { (request, error) in
             guard let observations = request.results as? [VNFaceObservation] else {
                 return
             }
-            
+            if observations.count == 0 {
+                completion(nil)
+            }
             print("Found \(observations.count) faces in the image")
             
             for face in observations {

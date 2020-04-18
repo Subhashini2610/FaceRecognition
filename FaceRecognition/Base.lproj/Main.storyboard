@@ -46,7 +46,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48h-be-K6w">
                                                     <rect key="frame" x="0.0" y="280" width="376" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="View Contour Lines"/>
+                                                    <state key="normal" title="View Face Contour"/>
                                                     <connections>
                                                         <action selector="didTapViewContourLines:" destination="pOO-0P-3fF" eventType="touchUpInside" id="4hx-dn-yvg"/>
                                                     </connections>

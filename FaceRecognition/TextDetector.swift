@@ -11,13 +11,15 @@ import Vision
 
 class TextDetector {
     
-    func detectText(on image: UIImage, completion: @escaping (UIImage) -> Void) {
+    func detectText(on image: UIImage, completion: @escaping (UIImage?) -> Void) {
         let request = VNDetectTextRectanglesRequest { (request, error) in
             
             guard let observations = request.results as? [VNTextObservation], error == nil else {
                 return
             }
-            
+            if observations.count == 0 {
+                completion(nil)
+            }
             var resultImage = image
             for observation in observations {
                 if let charBoxes = observation.characterBoxes {

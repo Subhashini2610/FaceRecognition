@@ -57,7 +57,11 @@ class CustomCell: UICollectionViewCell {
     @IBAction func didTapViewContourLines(_ sender: Any) {
         DispatchQueue.global().async{
             FaceDetector().findLandmarks(for: self.image!) { (image) in
-                DispatchQueue.main.async {                                    self.photoImageView.image = image
+                DispatchQueue.main.async {                           if let finalImage = image {
+                        self.photoImageView.image = finalImage
+                    } else {
+                        self.showToast(message: "No faces were detected", font: UIFont(name: "HelveticaNeue-Thin", size: 14.0)!)
+                    }
                 }
             }
         }
@@ -68,9 +72,34 @@ class CustomCell: UICollectionViewCell {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
             TextDetector().detectText(on: inputImage!) { (resultImage) in
                 DispatchQueue.main.async {
-                    self.photoImageView.image = resultImage
+                    if let finalImage = resultImage {
+                        self.photoImageView.image = finalImage
+                    } else {
+                        self.showToast(message: "No text was detected", font: UIFont(name: "HelveticaNeue-Thin", size: 14.0)!)
+                    }
                 }
             }
         }
     }
 }
+
+extension CustomCell {
+
+func showToast(message : String, font: UIFont) {
+
+    let toastLabel = UILabel(frame: CGRect(x: self.contentView.frame.size.width/2 - 75, y: self.contentView.frame.size.height-100, width: 150, height: 35))
+    toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+    toastLabel.textColor = UIColor.white
+    toastLabel.font = font
+    toastLabel.textAlignment = .center;
+    toastLabel.text = message
+    toastLabel.alpha = 1.0
+    toastLabel.layer.cornerRadius = 10;
+    toastLabel.clipsToBounds  =  true
+    self.contentView.addSubview(toastLabel)
+    UIView.animate(withDuration: 3.0, delay: 0.0, options: .curveEaseOut, animations: {
+         toastLabel.alpha = 0.0
+    }, completion: {(isCompleted) in
+        toastLabel.removeFromSuperview()
+    })
+} }
