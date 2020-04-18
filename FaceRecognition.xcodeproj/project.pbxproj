@@ -20,6 +20,7 @@
 		304D27A624423B9F0058A19D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304D27A424423B9F0058A19D /* LaunchScreen.storyboard */; };
 		304D27AE24432CAC0058A19D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D27AD24432CAC0058A19D /* CustomCell.swift */; };
 		304D27B0244383BB0058A19D /* CustomCell+Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D27AF244383BB0058A19D /* CustomCell+Vision.swift */; };
+		30E15406244B509F004E9781 /* TextDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E15405244B509F004E9781 /* TextDetector.swift */; };
 		30EA1BAF2446099E00CF8CD8 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EA1BAE2446099E00CF8CD8 /* FaceDetector.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		304D27A724423B9F0058A19D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		304D27AD24432CAC0058A19D /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		304D27AF244383BB0058A19D /* CustomCell+Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomCell+Vision.swift"; sourceTree = "<group>"; };
+		30E15405244B509F004E9781 /* TextDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDetector.swift; sourceTree = "<group>"; };
 		30EA1BAE2446099E00CF8CD8 /* FaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				304D279924423B9B0058A19D /* AppDelegate.swift */,
 				304D279B24423B9B0058A19D /* SceneDelegate.swift */,
 				304D279D24423B9B0058A19D /* ViewController.swift */,
+				30E15405244B509F004E9781 /* TextDetector.swift */,
 				304D27AF244383BB0058A19D /* CustomCell+Vision.swift */,
 				304D279F24423B9B0058A19D /* Main.storyboard */,
 				303BBFA52448B828002EA41D /* VideoViewController.swift */,
@@ -166,6 +169,7 @@
 				30107AD92443959700028602 /* CropFaceViewController.swift in Sources */,
 				304D279A24423B9B0058A19D /* AppDelegate.swift in Sources */,
 				303BBFA82448B9ED002EA41D /* PreviewView.swift in Sources */,
+				30E15406244B509F004E9781 /* TextDetector.swift in Sources */,
 				304D27B0244383BB0058A19D /* CustomCell+Vision.swift in Sources */,
 				304D27AE24432CAC0058A19D /* CustomCell.swift in Sources */,
 				30107ADB2443977900028602 /* CropFaceCustomCell.swift in Sources */,

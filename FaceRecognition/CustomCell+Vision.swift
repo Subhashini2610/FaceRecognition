@@ -2,8 +2,8 @@
 //  CustomCell+Vision.swift
 //  FaceRecognition
 //
-//  Created by Narayanaswamy, Subhashini (623) on 12/04/20.
-//  Copyright © 2020 Narayanaswamy, Subhashini (623). All rights reserved.
+//  Created by Narayanaswamy, Subhashini on 12/04/20.
+//  Copyright © 2020 Narayanaswamy, Subhashini. All rights reserved.
 //
 
 import UIKit

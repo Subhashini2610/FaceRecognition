@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Face_Recognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="pOO-0P-3fF" customClass="CustomCell" customModule="FaceRecognition" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="pOO-0P-3fF" customClass="CustomCell" customModule="Face_Recognition" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="171" width="376" height="378"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pqw-Si-1e0">
@@ -34,8 +34,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nvI-td-hiA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="280"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="240"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiR-j4-2bU">
+                                                    <rect key="frame" x="0.0" y="240" width="376" height="40"/>
+                                                    <state key="normal" title="Detect texts"/>
+                                                    <connections>
+                                                        <action selector="didTapToViewTexts:" destination="pOO-0P-3fF" eventType="touchUpInside" id="PQb-80-IcF"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48h-be-K6w">
                                                     <rect key="frame" x="0.0" y="280" width="376" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,16 +65,20 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="zJU-bv-g70" secondAttribute="trailing" id="3Hm-wE-F4W"/>
+                                                <constraint firstItem="48h-be-K6w" firstAttribute="top" secondItem="eiR-j4-2bU" secondAttribute="bottom" id="5pQ-aZ-gGA"/>
                                                 <constraint firstItem="zJU-bv-g70" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" id="6hQ-Bi-1mO"/>
                                                 <constraint firstItem="48h-be-K6w" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" id="8d1-jH-DSB"/>
                                                 <constraint firstItem="48h-be-K6w" firstAttribute="height" secondItem="zJU-bv-g70" secondAttribute="height" id="CNZ-hq-2QL"/>
                                                 <constraint firstItem="nvI-td-hiA" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" id="NCY-Cr-OJB"/>
                                                 <constraint firstAttribute="trailing" secondItem="nvI-td-hiA" secondAttribute="trailing" id="W98-6m-TWg"/>
+                                                <constraint firstItem="eiR-j4-2bU" firstAttribute="leading" secondItem="Pqw-Si-1e0" secondAttribute="leading" id="aF4-Xg-WUI"/>
                                                 <constraint firstItem="zJU-bv-g70" firstAttribute="top" secondItem="48h-be-K6w" secondAttribute="bottom" id="aNX-z8-vab"/>
                                                 <constraint firstAttribute="trailing" secondItem="48h-be-K6w" secondAttribute="trailing" id="e8K-Vh-0ag"/>
                                                 <constraint firstAttribute="bottom" secondItem="zJU-bv-g70" secondAttribute="bottom" multiplier="1.05" id="gVs-F1-keH"/>
-                                                <constraint firstItem="48h-be-K6w" firstAttribute="top" secondItem="nvI-td-hiA" secondAttribute="bottom" id="hTD-Jv-YMa"/>
+                                                <constraint firstAttribute="trailing" secondItem="eiR-j4-2bU" secondAttribute="trailing" id="ivu-Xn-iiB"/>
                                                 <constraint firstItem="nvI-td-hiA" firstAttribute="top" secondItem="Pqw-Si-1e0" secondAttribute="top" id="kSF-8L-5pa"/>
+                                                <constraint firstItem="eiR-j4-2bU" firstAttribute="top" secondItem="nvI-td-hiA" secondAttribute="bottom" id="vDW-gb-uYM"/>
+                                                <constraint firstItem="eiR-j4-2bU" firstAttribute="height" secondItem="zJU-bv-g70" secondAttribute="height" id="we1-Ig-Nwh"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="376" height="378"/>
@@ -116,12 +127,12 @@
         <!--Video View Controller-->
         <scene sceneID="n3w-U3-U0T">
             <objects>
-                <viewController id="mB2-IX-23W" customClass="VideoViewController" customModule="FaceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mB2-IX-23W" customClass="VideoViewController" customModule="Face_Recognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MDs-if-phI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsM-wf-idh" customClass="PreviewView" customModule="FaceRecognition" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsM-wf-idh" customClass="PreviewView" customModule="Face_Recognition" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zap-oD-6RE">
@@ -166,7 +177,7 @@
         <!--Crop Face View Controller-->
         <scene sceneID="kmD-cD-RaU">
             <objects>
-                <viewController storyboardIdentifier="CropFaceViewController" id="0J5-Eh-wgP" customClass="CropFaceViewController" customModule="FaceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CropFaceViewController" id="0J5-Eh-wgP" customClass="CropFaceViewController" customModule="Face_Recognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hpr-om-cQf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +192,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cropFaceCell" id="LPg-Gv-2d7" customClass="CropFaceCustomCell" customModule="FaceRecognition" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cropFaceCell" id="LPg-Gv-2d7" customClass="CropFaceCustomCell" customModule="Face_Recognition" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="131"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4VY-bb-thQ">
@@ -206,10 +217,34 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWf-uS-ZJE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No faces were detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48f-k3-R7l">
+                                        <rect key="frame" x="0.0" y="394" width="414" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ApC-n4-MGX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="48f-k3-R7l" firstAttribute="centerX" secondItem="YWf-uS-ZJE" secondAttribute="centerX" id="B53-QH-AlZ"/>
+                                    <constraint firstItem="48f-k3-R7l" firstAttribute="centerY" secondItem="YWf-uS-ZJE" secondAttribute="centerY" id="KQf-cy-oXM"/>
+                                    <constraint firstItem="48f-k3-R7l" firstAttribute="width" secondItem="YWf-uS-ZJE" secondAttribute="width" id="p5b-bZ-881"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="y5E-Yp-SjL" firstAttribute="bottom" secondItem="YWf-uS-ZJE" secondAttribute="bottom" id="4Bl-kI-J47"/>
+                            <constraint firstItem="y5E-Yp-SjL" firstAttribute="trailing" secondItem="YWf-uS-ZJE" secondAttribute="trailing" id="8we-wc-3ig"/>
                             <constraint firstItem="NgF-pw-yVU" firstAttribute="bottom" secondItem="y5E-Yp-SjL" secondAttribute="bottom" id="BHQ-WD-YXf"/>
+                            <constraint firstItem="YWf-uS-ZJE" firstAttribute="top" secondItem="y5E-Yp-SjL" secondAttribute="top" id="KHN-mc-Rpm"/>
+                            <constraint firstItem="YWf-uS-ZJE" firstAttribute="leading" secondItem="y5E-Yp-SjL" secondAttribute="leading" id="Nfx-8H-klp"/>
                             <constraint firstItem="NgF-pw-yVU" firstAttribute="top" secondItem="y5E-Yp-SjL" secondAttribute="top" id="ZMv-Ox-r1H"/>
                             <constraint firstItem="NgF-pw-yVU" firstAttribute="trailing" secondItem="y5E-Yp-SjL" secondAttribute="trailing" id="cvf-52-rK9"/>
                             <constraint firstItem="NgF-pw-yVU" firstAttribute="leading" secondItem="y5E-Yp-SjL" secondAttribute="leading" id="wmD-SC-hcP"/>
@@ -218,6 +253,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="NgF-pw-yVU" id="9Zk-zB-BKa"/>
+                        <outlet property="noDetectedFacesView" destination="YWf-uS-ZJE" id="8oh-TS-vbD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ue0-FJ-CKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

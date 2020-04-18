@@ -2,14 +2,15 @@
 //  CropFaceViewController.swift
 //  FaceRecognition
 //
-//  Created by Narayanaswamy, Subhashini (623) on 12/04/20.
-//  Copyright © 2020 Narayanaswamy, Subhashini (623). All rights reserved.
+//  Created by Narayanaswamy, Subhashini on 12/04/20.
+//  Copyright © 2020 Narayanaswamy, Subhashini. All rights reserved.
 //
 
 import UIKit
 
 class CropFaceViewController: UIViewController {
     
+    @IBOutlet weak var noDetectedFacesView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var faces: [UIImage] = []
@@ -21,6 +22,11 @@ class CropFaceViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         getFacesFromPicture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        noDetectedFacesView.isHidden = faces.count == 0 ? false : true
     }
     
     func getFacesFromPicture() {

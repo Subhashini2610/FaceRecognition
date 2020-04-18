@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  FaceRecognition
 //
-//  Created by Narayanaswamy, Subhashini (623) on 11/04/20.
-//  Copyright © 2020 Narayanaswamy, Subhashini (623). All rights reserved.
+//  Created by Narayanaswamy, Subhashini on 11/04/20.
+//  Copyright © 2020 Narayanaswamy, Subhashini. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var data: [UIImage] = [#imageLiteral(resourceName: "xMen"), #imageLiteral(resourceName: "giants"), #imageLiteral(resourceName: "starWars"), #imageLiteral(resourceName: "faces")]
+    var data: [UIImage] = [#imageLiteral(resourceName: "xMen"), #imageLiteral(resourceName: "giants"), #imageLiteral(resourceName: "starWars"), #imageLiteral(resourceName: "faces"), #imageLiteral(resourceName: "TextDetection")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,8 +2,8 @@
 //  CustomCell.swift
 //  FaceRecognition
 //
-//  Created by Narayanaswamy, Subhashini (623) on 12/04/20.
-//  Copyright © 2020 Narayanaswamy, Subhashini (623). All rights reserved.
+//  Created by Narayanaswamy, Subhashini on 12/04/20.
+//  Copyright © 2020 Narayanaswamy, Subhashini. All rights reserved.
 //
 
 import UIKit
@@ -58,6 +58,17 @@ class CustomCell: UICollectionViewCell {
         DispatchQueue.global().async{
             FaceDetector().findLandmarks(for: self.image!) { (image) in
                 DispatchQueue.main.async {                                    self.photoImageView.image = image
+                }
+            }
+        }
+    }
+    
+    @IBAction func didTapToViewTexts(_ sender: Any) {
+        let inputImage = self.photoImageView.image
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
+            TextDetector().detectText(on: inputImage!) { (resultImage) in
+                DispatchQueue.main.async {
+                    self.photoImageView.image = resultImage
                 }
             }
         }
